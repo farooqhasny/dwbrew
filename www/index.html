@@ -120,11 +120,9 @@
 				ctx.stroke();
 				
 				// add time value to x-axis
-				if (i%interval === 0) {
-					ctx.fillStyle = "#716e6e";
-					var tstamp = dataArray[i].time.substring(0,2);
-					ctx.fillText(tstamp,5+nSamples*i,306);
-				}
+				var tstamp = dataArray[i].time.substring(0,2);
+				ctx.fillStyle = "#716e6e";
+				if (i%interval === 0) ctx.fillText(tstamp,5+nSamples*i,306);
 				if (i === 0 || tstamp ==='00') {
 					var d = dataArray[i].date;
 					var dstamp = d.substring(0,4)+"/"+d.substring(4,6)+"/"+d.substring(6,8);
