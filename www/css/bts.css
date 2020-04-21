@@ -1,0 +1,119 @@
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #becbd2;
+    color: black;
+    text-align: left;
+    font-size: 11px;
+    border-radius: 6px;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -10px;
+}
+ 
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.popup {
+    position: relative;
+    display: inline-block;
+}
+
+.popup .popupmenu {
+    visibility: hidden;
+    width: 200px;
+    background-color: #becbd2;
+    color: black;
+    text-align: left;
+    font-size: 11px;
+    border-radius: 6px;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -10px;
+}
+
+.bts-no-select{     
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;  
+}
+
+.iframe-container {
+    height: 100%;
+    overflow: hidden;
+    padding-bottom: 50%;
+    position: relative;
+}
+
+.iframe-container iframe {
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.drop_file_zone {
+    background-color: #EEE; 
+    border: #999 1px dashed;
+    width: 150px; 
+    height: 150px;
+    padding: 0px;
+    font-size: 14px;
+}
+.drag_upload_file {
+  width:50%;
+  margin:0 auto;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+}
+
+/* Small screen */
+@media (max-width: 420px) {
+    .iframe-container {
+        height: 100%;
+        <!--padding-bottom: 75%;-->
+    }
+}
+
