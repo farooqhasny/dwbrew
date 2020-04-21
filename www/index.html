@@ -111,15 +111,20 @@
 
 			ctx.font="10px Arial";
 			var nSamples = (c.width-10)/(dataArray.length-1);
+			var interval = parseInt(dataArray.length/50)+1;
 			for (var i=0; i<dataArray.length-1; i++) {
 				ctx.strokeStyle = "#d1d1e0";
 				ctx.beginPath();
 				ctx.moveTo(5+nSamples*i, 5);
 				ctx.lineTo(5+nSamples*i, 295);
 				ctx.stroke();
-				ctx.fillStyle = "#716e6e";
-				var tstamp = dataArray[i].time.substring(0,2);
-				ctx.fillText(tstamp,5+nSamples*i,306);
+				
+				// add time value to x-axis
+				if (i%interval === 0) {
+					ctx.fillStyle = "#716e6e";
+					var tstamp = dataArray[i].time.substring(0,2);
+					ctx.fillText(tstamp,5+nSamples*i,306);
+				}
 				if (i === 0 || tstamp ==='00') {
 					var d = dataArray[i].date;
 					var dstamp = d.substring(0,4)+"/"+d.substring(4,6)+"/"+d.substring(6,8);
