@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="/css/w3-theme-blue.css">
   </head>
   <body class="w3-white" onload='init()'>
-	  Simulate Data: <input type="checkbox" id="myCheck"  onclick="myFunction()">
+	<input type="checkbox" id="myCheck"  onclick="myFunction()">
 	<p id="text1">Real Data</p>
 
 
@@ -189,14 +189,14 @@
 			return new Promise(resolve => setTimeout(resolve, ms));
 		}
 		function myFunction() {
-  var checkBox = document.getElementById("myCheck");
-  var text = document.getElementById("text1");
-  if (checkBox.checked == true){
-    text.innerHTML = "Simulated Data";
-  } else {
-     text.innerHTML = "Real Data";
-  }
-}
+  			var checkBox = document.getElementById("myCheck");
+  			var text = document.getElementById("text1");
+  			if (checkBox.checked == true){
+						    	text.innerHTML = "Simulated Data";
+						  	} else {
+						     	text.innerHTML = "Real Data";
+						  }
+					}
 	</script>
   </body>
 </html>
