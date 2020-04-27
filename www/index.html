@@ -8,8 +8,8 @@
 	<link rel="stylesheet" href="/css/w3-theme-blue.css">
   </head>
   <body class="w3-white" onload='init()'>
-	  Checkbox: <input type="checkbox" id="myCheck"  onclick="myFunction()">
-	<p id="text1" style="display:none">Checkbox is CHECKED!</p>
+	  Simulate Data: <input type="checkbox" id="myCheck"  onclick="myFunction()">
+	<p id="text1" style="display:none">Real Data</p>
 
 
 
@@ -192,9 +192,9 @@
   var checkBox = document.getElementById("myCheck");
   var text = document.getElementById("text1");
   if (checkBox.checked == true){
-    text.style.display = "block";
+    text.text = "block";
   } else {
-     text.style.display = "none";
+     text.text = "none";
   }
 }
 	</script>
