@@ -8,6 +8,12 @@
 	<link rel="stylesheet" href="/css/w3-theme-blue.css">
   </head>
   <body class="w3-white" onload='init()'>
+	  Checkbox: <input type="checkbox" id="myCheck"  onclick="myFunction()">
+	<p id="text1" style="display:none">Checkbox is CHECKED!</p>
+
+
+
+	
 	<div class="w3-container">
 		<div class="w3-bar w3-margin-right w3-light-blue">
 			<h1 class="w3-bar-item">David's Brewing System</h1>
@@ -182,6 +188,15 @@
 		function sleep(ms) {
 			return new Promise(resolve => setTimeout(resolve, ms));
 		}
+		function myFunction() {
+  var checkBox = document.getElementById("myCheck");
+  var text = document.getElementById("text1");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
 	</script>
   </body>
 </html>
